@@ -10,8 +10,6 @@ $uri = new Uri($request->getRequestUri());
 ?>
                 <!-- content -->
                 <?if ($uri->getUri() !== "/") :?>
-                <div class="content">
-                    <div class="cnt">
                         <?if ($uri->getUri() !== "/") :?>
                         <header>
                             <h1>Заголовок страницы</h1>

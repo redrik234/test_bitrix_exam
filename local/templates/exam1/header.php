@@ -174,6 +174,8 @@ $uri = new Uri($request->getRequestUri());
             <div class="page">
             <!-- content box -->
                 <div class="content-box">
+                    <div class="content">
+                        <div class="cnt">
         <?else:?>
             <!-- page -->
             <div class="page">
