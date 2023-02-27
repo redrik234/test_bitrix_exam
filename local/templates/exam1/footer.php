@@ -44,34 +44,28 @@ $uri = new Uri($request->getRequestUri());
                 <!-- side -->
                 <div class="side">
                     <!-- side menu -->
-                    <div class="side-block side-menu">
-                        <div class="title-block">Навигация</div>
-                        <div class="menu-block">
-                            <ul>
-                                <li><a href="">Кухни</a>
-                                </li>
-                                <li><a href="">Гарнитуры</a>
-                                </li>
-                                <li class="selected">
-                                    <a href="">Спальни</a>
-                                </li>
-                                <li>
-                                    <a href="">Шкафы</a>
-                                </li>
-                                <li><a href="">Столы</a>
-                                </li>
-                                <li><a href="">Стулья</a>
-                                </li>
-                                <li>
-                                    <a href="">Прихожие</a>
-                                </li>
-                                <li><a href="">Диваны</a>
-                                </li>
-                                <li><a href="">Кресла</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"left_menu", 
+	array(
+		"COMPONENT_TEMPLATE" => "left_menu",
+		"ROOT_MENU_TYPE" => "left",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+			0 => "",
+			1 => "",
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);
+                    ?>
                     <!-- /side menu -->
                     <!-- side anonse -->
                     <div class="side-block side-anonse">

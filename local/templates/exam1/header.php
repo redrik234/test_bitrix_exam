@@ -82,84 +82,25 @@ $uri = new Uri($request->getRequestUri());
         <!-- /header -->
 
         <!-- nav -->
-        <nav class="nav">
-            <div class="inner-wrap">
-                <div class="menu-block popup-wrap">
-                    <a href="" class="btn-menu btn-toggle"></a>
-                    <div class="menu popup-block">
-                        <ul class="">
-                            <li class="main-page">
-                                <a href="">Главная</a>
-                            </li>
-                            <li>
-                                <a href="">Компания</a>
-                                <ul>
-                                    <li>
-                                        <a href="">Пункт 1</a>
-                                        <ul>
-                                            <li>
-                                                <a href="">Пункт 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Пункт 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="">Пункт 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Пункт 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Пункт 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">Новости</a>
-                            </li>
-                            <li>
-                                <a href="">Каталог</a>
-                                <ul>
-                                    <li>
-                                        <a href="">Пункт 1</a>
-                                        <ul>
-                                            <li>
-                                                <a href="">Пункт 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="">Пункт 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="">Пункт 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Пункт 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Пункт 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="">Фотогалерея</a>
-                            </li>
-                            <li>
-                                <a href="">Партнерам</a>
-                            </li>
-                            <li>
-                                <a href="">Контакты</a>
-                            </li>
-                        </ul>
-                        <a href="" class="btn-close"></a>
-                    </div>
-                    <div class="menu-overlay"></div>
-                </div>
-            </div>
-        </nav>
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:menu", 
+            "horizontal_menu", 
+            array(
+                "COMPONENT_TEMPLATE" => "horizontal_menu",
+                "ROOT_MENU_TYPE" => "top",
+                "MENU_CACHE_TYPE" => "N",
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_CACHE_GET_VARS" => array(
+                ),
+                "MAX_LEVEL" => "3",
+                "CHILD_MENU_TYPE" => "left",
+                "USE_EXT" => "Y",
+                "DELAY" => "N",
+                "ALLOW_MULTI_SELECT" => "N"
+            ),
+            false
+        );?>
         <!-- /nav -->
         <?if ($uri->getUri() !== "/"):?>
             <!-- breadcrumbs -->

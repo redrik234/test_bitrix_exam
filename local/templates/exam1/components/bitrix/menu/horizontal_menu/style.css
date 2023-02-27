@@ -1,0 +1,28 @@
+.header .menu-block {
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom: 20px;
+	letter-spacing: -0.025em;
+}
+.header .menu-block ul {
+	margin: 0 -10px;
+}
+.header .menu-block a {
+	color: #010101;
+	text-decoration: underline;
+}
+.header .menu-block a:hover {
+	text-decoration: none;
+}
+.header .menu-block li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+}
+.header .menu-block .att {
+	font-size: 13px;
+}
+.header .menu-block .att a {
+	font-family: 'HelveticaNeueCyrBold', sans-serif;
+}
