@@ -170,7 +170,10 @@ $uri = new Uri($request->getRequestUri());
                     <span>Выставки и события</span>
                 </div>
             </div>
-            <!-- /breadcrumbs -->';
+            <div class="page">
+            <!-- content box -->
+                <div class="content-box">
+            <!-- /breadcrumbs -->
         <?else:?>
             <!-- page -->
             <div class="page">
