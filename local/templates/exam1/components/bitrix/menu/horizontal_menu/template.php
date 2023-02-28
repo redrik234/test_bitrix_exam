@@ -22,12 +22,16 @@
 									<li>
 										<a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 										<ul>
-											<div class="menu-text"><?=$arItem['PARAMS']['SPECIAL_TEXT']?></div>
+											<?if (!empty($arItem['PARAMS']['SPECIAL_TEXT'])):?>
+												<div class="menu-text"><?=$arItem['PARAMS']['SPECIAL_TEXT']?></div>
+											<?endif?>
 								<?else:?>
 									<li>
 										<a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
 										<ul>
-											<div class="menu-text"><?=$arItem['PARAMS']['SPECIAL_TEXT']?></div>
+											<?if (!empty($arItem['PARAMS']['SPECIAL_TEXT'])):?>
+												<div class="menu-text"><?=$arItem['PARAMS']['SPECIAL_TEXT']?></div>
+											<?endif?>
 								<?endif?>
 							<?else:?>
 								<?if ($arItem["PERMISSION"] > "D"):?>
