@@ -45,9 +45,15 @@ Loc::loadMessages(__FILE__);
 				</div>
 			</div>
 			<div class="review-img-wrap">
-				<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-					<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="img">
-				</a>
+				<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
+					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+						<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="img">
+					</a>
+				<?else:?>
+					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+						<img src="<?=$templateFolder?>/images/no_photo.jpg" alt="img">
+					</a>
+				<?endif?>
 			</div>
 		</div>
 	<?endforeach?>
