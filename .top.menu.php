@@ -34,6 +34,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array("SPECIAL_TEXT"=>"текст для пункта Партнерам"), 
 		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/rew/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
