@@ -6,7 +6,7 @@
 		<div class="menu popup-block">
 			<ul>
 				<li class="main-page">
-					<a href="">Главная</a>
+					<a href="/">Главная</a>
 				</li>
 				<?
 					$previousLevel = 0;
