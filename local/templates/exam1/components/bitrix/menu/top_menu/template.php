@@ -25,7 +25,13 @@
 						?>
 						<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 							<li>
-								<a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+								<a href="<?=$arItem["LINK"]?>" 
+									<?if (isset($arItem["PARAMS"]["TEXT_COLOR"])):?>
+										class="<?=$arItem["PARAMS"]["TEXT_COLOR"]?>"
+									<?endif?>
+								>
+									<?=$arItem["TEXT"]?>
+								</a>
 							<ul>
 								<?=$textMenuHtml?>
 						<?else:?>
@@ -38,7 +44,13 @@
 						<?if ($arItem["PERMISSION"] > "D"):?>
 							<?if ($arItem["DEPTH_LEVEL"] == 1):?>
 								<li>
-									<a href="<?=$arItem["LINK"]?>"><?=$arItem["TEXT"]?></a>
+									<a href="<?=$arItem["LINK"]?>"
+										<?if (isset($arItem["PARAMS"]["TEXT_COLOR"])):?>
+											class="<?=$arItem["PARAMS"]["TEXT_COLOR"]?>"
+										<?endif?>
+									>
+										<?=$arItem["TEXT"]?>
+									</a>
 								</li>
 							<?else:?>
 								<li>
