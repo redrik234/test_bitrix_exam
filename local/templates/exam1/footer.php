@@ -28,12 +28,18 @@ Loc::loadMessages(__FILE__);
                     );?>
                     <!-- /side menu -->
                     <!-- side anonse -->
-                    <div class="side-block side-anonse">
-                        <div class="title-block"><span class="i i-title01"></span>Полезная информация!</div>
-                        <div class="item">
-                            <p>Клиенты предпочитают все больше эко-материалов.</p>
-                        </div>
-                    </div>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include", 
+                        "include_anonse", 
+                        array(
+                            "AREA_FILE_RECURSIVE" => "Y",
+                            "AREA_FILE_SHOW" => "sect",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "COMPONENT_TEMPLATE" => "include_anonse"
+                        ),
+                        false
+                    );?>
                     <!-- /side anonse -->
                     <!-- side wrap -->
                     <div class="side-wrap">
@@ -154,17 +160,17 @@ Loc::loadMessages(__FILE__);
                     <div class="address">ул. Летняя, стр.12, офис 512</div>
                     <div class="phone">
                         <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/local/include_area/element/phone_inc.php",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
+                            "bitrix:main.include", 
+                            ".default", 
+                            array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/local/include_area/element/phone_inc.php",
+                                "COMPONENT_TEMPLATE" => ".default"
+                            ),
+                            false
+                        );?>
                     </div>
                 </div>
                 <div class="main-soc-block">
