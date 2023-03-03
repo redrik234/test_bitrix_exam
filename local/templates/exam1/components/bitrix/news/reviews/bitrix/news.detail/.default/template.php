@@ -13,6 +13,7 @@
 use Bitrix\Main\Localization\Loc;
 Loc::loadMessages(__FILE__);
 $this->setFrameMode(true);
+$defaultImg = $templateFolder . "/images/no_photo.jpg";
 ?>
 
 <div class="review-block">
@@ -28,6 +29,10 @@ $this->setFrameMode(true);
 		</div>
 	</div>
 	<div style="clear: both;" class="review-img-wrap">
+
+		<?if (!isset($arResult["DETAIL_PICTURE"]) || empty($arResult["DETAIL_PICTURE"]["SRC"])) {
+			$arResult["DETAIL_PICTURE"]["SRC"] = $defaultImg;
+		}?>
 		<img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="img">
 	</div>
 </div>
