@@ -152,7 +152,19 @@ Loc::loadMessages(__FILE__);
                 <div class="title-block"><?=Loc::getMessage("CONTACT_INFO")?></div>
                 <div class="loc-block">
                     <div class="address">ул. Летняя, стр.12, офис 512</div>
-                    <div class="phone"><a href="tel:84952128506">8 (495) 212-85-06</a>
+                    <div class="phone">
+                        <?$APPLICATION->IncludeComponent(
+	"bitrix:main.include", 
+	".default", 
+	array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/local/include_area/element/phone_inc.php",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?>
                     </div>
                 </div>
                 <div class="main-soc-block">
