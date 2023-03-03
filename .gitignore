@@ -26,6 +26,7 @@
 *.tbk
 
 # dirs & files
+/local/resource/
 /bower_components/
 /node_modules/
 /nbproject/
