@@ -9,3 +9,10 @@
 .nav .menu .color-green{
  color: #7CFC00;
 }
+
+.side .side-block .red {
+    background: linear-gradient(#fda3a3, #ff0000);
+}
+.side .side-block .green {
+background: linear-gradient(#e2ffe7, #00ff43);
+}
