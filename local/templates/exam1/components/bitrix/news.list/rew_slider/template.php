@@ -11,8 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-const WIDTH = 49;
-const HEIGHT = 49;
+const WIDTH = 39;
+const HEIGHT = 39;
 const STR_LENGTH = 150;
 $defaultImg = $templateFolder . "/images/no_photo_left_block.jpg";
 ?>
@@ -34,7 +34,8 @@ $defaultImg = $templateFolder . "/images/no_photo_left_block.jpg";
 									if ($arItem["PREVIEW_PICTURE"]["SRC"]) {
 										$imgPath = CFile::ResizeImageGet(
 											$arItem["PREVIEW_PICTURE"], 
-											['width' => WIDTH, 'height' => HEIGHT]
+											['width' => WIDTH, 'height' => HEIGHT],
+											BX_RESIZE_IMAGE_PROPORTIONAL
 										)["src"];
 									}
 								?>
