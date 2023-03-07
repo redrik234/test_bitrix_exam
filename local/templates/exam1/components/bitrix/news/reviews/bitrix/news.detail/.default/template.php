@@ -36,6 +36,7 @@ $defaultImg = $templateFolder . "/images/no_photo.jpg";
 		<img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="img">
 	</div>
 </div>
+<?if (!empty($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"])):?>
 <div class="exam-review-doc">
 	<p>Документы:</p>
 	<?foreach ($arResult["PROPERTIES"]["DOCUMENTS"]["VALUE"] as $fileId):?>
@@ -48,5 +49,6 @@ $defaultImg = $templateFolder . "/images/no_photo.jpg";
 	</div>
 	<?endforeach?>
 </div>
+<?endif?>
 <hr>
 <a href="<?=$arResult["LIST_PAGE_URL"]?>" class="review-block_back_link"> &larr; <?=Loc::getMessage("BACK_TO_LIST")?></a>

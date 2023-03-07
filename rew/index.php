@@ -26,7 +26,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"AJAX_OPTION_STYLE" => "Y",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
-		"CACHE_TYPE" => "A",
+		"CACHE_TYPE" => "N",
 		"CACHE_TIME" => "36000000",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
@@ -44,7 +44,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
 		"LIST_FIELD_CODE" => array(
-			0 => "",
+			0 => "DETAIL_PICTURE",
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
@@ -93,4 +93,7 @@ $APPLICATION->SetTitle("Отзывы");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
